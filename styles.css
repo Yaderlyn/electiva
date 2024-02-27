@@ -1,63 +1,121 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-
-
-
-:root {
-    --dark: #001234;
-    --blanco: white;
-}
-
 body {
-    padding: 0;
+    font-family: Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
-    font-family: monospace;
-    
-}
-
-.navbar {
-    background-color: var(--dark);
-    padding: .8rem;
-}
-
-
-.navbar-item {
-    text-decoration: none;
-    color: var(--blanco);
-    font-weight: bold;
-    font-size: 32px;
-    height: 8vh;
-}
-
-.main-content {
-    height: 92vh;
+    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-.crud-container {
-    width: 70%;
-    padding: 1.5rem 3rem;
-    overflow: auto;
-    box-shadow: 0 0 1rem 0 rgb(0, 0, 0,0.4);
-    border-radius: 0.8rem;
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.crud-header {
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 96%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.add-task {
+    margin: .6rem 0rem;
+    width: 100%
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem 1rem 2rem;
-    border-bottom: 1px solid rgb(202, 202, 202);
+    align-items: center;
 }
 
+li:last-child {
+    border-bottom: none;
+}
 
+li:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
 
-.crud-container h1 {
+.completed {
+    text-decoration: line-through;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    font-size: 20px;
 }
 
-.button span {
-    margin-left: 10px;
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+input[type="text"]:focus{
+    outline: none;
 }
