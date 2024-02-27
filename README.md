@@ -11,4 +11,4 @@
     <td>3</td>
   </tr>
 </table>
-<p><b>Link del proyecto:</b>https://yaderlyn.github.io/electiva/</p>
+<p><b>Link del proyecto:</b> https://yaderlyn.github.io/electiva/</p>
